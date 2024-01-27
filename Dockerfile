@@ -12,4 +12,4 @@ RUN apk add aws-cli
 # Remove cache
 RUN rm -rf /var/cache/apk/*
 
-LABEL maintainer="Bread God (https://github.com/Vipcube)"
+LABEL maintainer="Joseph (https://github.com/zerolr)"

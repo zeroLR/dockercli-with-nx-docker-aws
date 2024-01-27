@@ -1,14 +1,13 @@
 name: Auto Build for Docker image
 
-on:
-  [push]
+on: [push]
 
 jobs:
   docker:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 14, 16, 18 ]
+        node-version: [14, 16, 18]
 
     steps:
       - name: Checkout
@@ -35,4 +34,4 @@ jobs:
             NODE_VERSION=${{ matrix.node-version }}
           push: true
           tags: |
-            vipcube/dockercli-with-nx-docker-aws:${{ matrix.node-version }}-alpine
+            zerolr/dockercli-with-nx-docker-aws:${{ matrix.node-version }}-alpine
